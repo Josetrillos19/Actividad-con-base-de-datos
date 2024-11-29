@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Proyecto</title>
+    <link rel="stylesheet" href="css/styles.css">    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+   <!-- Navbar de Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">Energía</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+           
+              <!-- Dropdown para más opciones -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Energias
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="todos_los_tipos_energia.html">Consulta general</a>
+                      <a class="dropdown-item" href="buscar_tipo_energia.html">Buscar tipo de energia</a>
+                      <a class="dropdown-item" href="registro_proyecto.html">Agregar Nuevo Proyecto</a>
+                  </div>
+              </li>
+          </li>
+          <!-- Dropdown para más opciones -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Proyectos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="proyectos.html">Consulta general</a>
+                <a class="dropdown-item" href="registro_proyecto.html">Agregar Nuevo Tipo</a>
+            </div>
+        </li>
+            <!-- Dropdown para más opciones -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Minerales
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="minerales.html">Consulta general</a>
+                  <a class="dropdown-item" href="registrar_mineral.html">Agregar Nuevo Tipo</a>
+              </div>
+          </li>
+              <!-- Dropdown para más opciones -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Investigadores
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="investigadores.html">Consulta general</a>
+                    <a class="dropdown-item" href="registro_investigador.html">Agregar nuevo investigador</a>
+                </div>
+            </li>
+               </ul>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+    <div class="container mt-4">
+        <h1>Detalles del Proyecto</h1>
+        <div id="proyecto-detalles" class="card">
+            <div class="card-body">
+                <!-- Los detalles se llenarán dinámicamente -->
+                <h5 id="nombre" class="card-title"></h5>
+                <p id="descripcion" class="card-text"></p>
+                <p><strong>Ubicación:</strong> <span id="ubicacion"></span></p>
+                <p><strong>Fecha Inicio:</strong> <span id="fecha_inicio"></span></p>
+                <p><strong>Fecha Fin:</strong> <span id="fecha_fin"></span></p>
+                <p><strong>Tipo de Energía:</strong> <span id="tipo_energia"></span></p>
+                <div class="mt-4">
+                    <button class="btn btn-secondary" onclick="window.history.back()">Regresar</button>
+                    <button class="btn btn-primary" id="btn-editar">Editar Proyecto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="js/proyectos_detalle.js"></script>
+    <footer>
+        <p>&copy; 2024 Energía Sostenible. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

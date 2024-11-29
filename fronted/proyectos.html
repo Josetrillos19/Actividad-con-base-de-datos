@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Proyectos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+   <!-- Navbar de Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">Energía</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Energías
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="todos_los_tipos_energia.html">Consulta general</a>
+                      <a class="dropdown-item" href="buscar_tipo_energia.html">Buscar tipo de energía</a>
+                      <a class="dropdown-item" href="registro_proyecto.html">Agregar Nuevo Proyecto</a>
+                  </div>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Proyectos
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="proyectos.html">Consulta general</a>
+                      <a class="dropdown-item" href="registro_proyecto.html">Agregar Nuevo Tipo</a>
+                  </div>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Minerales
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="minerales.html">Consulta general</a>
+                      <a class="dropdown-item" href="registrar_mineral.html">Agregar Nuevo Tipo</a>
+                  </div>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Investigadores
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="investigadores.html">Consulta general</a>
+                      <a class="dropdown-item" href="registro_investigador.html">Agregar nuevo investigador</a>
+                  </div>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+    <div class="container mt-4">
+        <h1>Lista de Proyectos</h1>
+
+        <!-- Botón para agregar un nuevo proyecto -->
+        <button class="btn btn-primary mb-3" onclick="window.location.href = 'registro_proyecto.html'">Agregar Nuevo Proyecto</button>
+
+        <!-- Tabla para mostrar los proyectos -->
+        <table id="tabla-proyectos" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Ubicación</th>
+                    <th>Fecha Inicio</th>
+                    <th>Fecha Fin</th>
+                    <th>Tipo de Energía</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Proyecto Solar</td>
+                    <td>Descripción de proyecto solar</td>
+                    <td>Ubicación A</td>
+                    <td>2024-01-01</td>
+                    <td>2024-12-31</td>
+                    <td>Solar</td>
+                    <td>
+                        <div class="d-flex">
+                            <button class="btn btn-warning mr-2">Editar</button>
+                            <button class="btn btn-danger">Eliminar</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Proyecto Eólico</td>
+                    <td>Descripción de proyecto eólico</td>
+                    <td>Ubicación B</td>
+                    <td>2024-02-01</td>
+                    <td>2025-02-01</td>
+                    <td>Eólica</td>
+                    <td>
+                        <div class="d-flex">
+                            <button class="btn btn-warning mr-2">Editar</button>
+                            <button class="btn btn-danger">Eliminar</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br><br><br>
+    <script src="js/proyectos.js"></script>
+    <footer>
+        <p>&copy; 2024 Energía Sostenible. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

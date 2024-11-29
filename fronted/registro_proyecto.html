@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Proyecto</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+   <!-- Navbar de Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">Energía</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+           
+              <!-- Dropdown para más opciones -->
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Energias
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="todos_los_tipos_energia.html">Consulta general</a>
+                      <a class="dropdown-item" href="buscar_tipo_energia.html">Buscar tipo de energia</a>
+                      <a class="dropdown-item" href="registro_proyecto.html">Agregar Nuevo Proyecto</a>
+                  </div>
+              </li>
+          </li>
+          <!-- Dropdown para más opciones -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Proyectos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="proyectos.html">Consulta general</a>
+                <a class="dropdown-item" href="registro_proyecto.html">Agregar Nuevo Tipo</a>
+            </div>
+        </li>
+            <!-- Dropdown para más opciones -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Minerales
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="minerales.html">Consulta general</a>
+                  <a class="dropdown-item" href="registrar_mineral.html">Agregar Nuevo Tipo</a>
+              </div>
+          </li>
+              <!-- Dropdown para más opciones -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Investigadores
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="investigadores.html">Consulta general</a>
+                    <a class="dropdown-item" href="registro_investigador.html">Agregar nuevo investigador</a>
+                </div>
+            </li>
+               </ul>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+
+    <div class="container mt-4">
+        <h1>Registrar Nuevo Proyecto</h1>
+
+        <!-- Formulario para agregar un proyecto -->
+        <form id="formulario-proyecto">
+            <div class="form-group">
+                <label for="nombre">Nombre del Proyecto:</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea class="form-control" id="descripcion" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="ubicacion">Ubicación:</label>
+                <input type="text" class="form-control" id="ubicacion" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_inicio">Fecha de Inicio:</label>
+                <input type="date" class="form-control" id="fecha_inicio" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_fin">Fecha de Fin:</label>
+                <input type="date" class="form-control" id="fecha_fin" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo_energia">Tipo de Energía:</label>
+                <select class="form-control" id="tipo_energia" required>
+                    <!-- Los tipos de energía se insertarán dinámicamente aquí -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar Proyecto</button>
+            <a href="proyectos.html" class="btn btn-secondary mt-3">Volver a Proyectos</a>
+        </form>
+    </div>
+<br><br><br>
+    <script src="js/registro_proyecto.js"></script>
+    <footer>
+        <p>&copy; 2024 Energía Sostenible. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Investigadores</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('img/greeco/energia\ geotermica.jpg'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4; /* Fondo más translúcido */
+            z-index: -1;
+          }
+          
+    </style>
+</head>
+<body>
+    <!-- Navbar de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Energía</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- Dropdown para Energías -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Energías</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="todos_los_tipos_energia.html">Consulta general</a>
+                            <a class="dropdown-item" href="buscar_tipo_energia.html">Buscar tipo de energía</a>
+                            <a class="dropdown-item" href="registro_proyecto.html">Agregar Nuevo Proyecto</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown para Proyectos -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Proyectos</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="proyectos.html">Consulta general</a>
+                            <a class="dropdown-item" href="registro_proyecto.html">Agregar Nuevo Tipo</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown para Minerales -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Minerales</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="minerales.html">Consulta general</a>
+                            <a class="dropdown-item" href="registrar_mineral.html">Agregar Nuevo Tipo</a>
+                        </div>
+                    </li>
+                    <!-- Dropdown para Investigadores -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Investigadores</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="investigadores.html">Consulta general</a>
+                            <a class="dropdown-item" href="registro_investigador.html">Agregar nuevo investigador</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Lista de Investigadores</h1>
+
+        <!-- Botón para agregar investigador -->
+        <div class="d-flex justify-content-end mb-3">
+            <button class="btn btn-success" id="btnAgregarInvestigador">Agregar Investigador</button>
+        </div>
+
+        <!-- Tabla para mostrar investigadores -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Especialidad</th>
+                    <th>Proyecto</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaInvestigadores">
+                <!-- Los datos se agregarán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Redirigir al formulario de registro de investigador
+        document.getElementById("btnAgregarInvestigador").addEventListener("click", () => {
+            window.location.href = "registro_investigador.html";
+        });
+    </script>
+    <br><br><br>
+    <script src="js/investigadores.js"></script>
+    <footer>
+        <p>&copy; 2024 Energía Sostenible. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
